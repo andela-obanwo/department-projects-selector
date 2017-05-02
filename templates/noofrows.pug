@@ -1,0 +1,25 @@
+extends index.pug
+block title
+  | Number of Departments
+block body
+  .row
+    .col.s7
+    form.col.s3(action="" method='post')
+      .row
+        .input-field.col.s12
+          select#noofrows(name='noofrows')
+            option(value="" selected) Number of Departments
+            option(value='1') 1
+            option(value='2') 2
+            option(value='3') 3
+            option(value='4') 4
+            option(value='5') 5
+            option(value='6') 6
+            option(value='7') 7
+            option(value='8') 8
+          label No. of Departments
+      .row
+        button.btn.waves-effect.waves-light(type='submit', name='action')
+          | Next
+          i.material-icons.right send
+    .col.s2

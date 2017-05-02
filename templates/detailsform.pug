@@ -1,0 +1,24 @@
+extends index.pug
+block title
+  | Project Details
+block body
+  .row
+    .col.s7
+    form.col.s3(action="" method='post')
+      | {% for row in range(1, noofrows+1) %}
+      .row
+        .input-field.col.s4
+          input(id='dept_name{{row}}', type='text', name='dept_name{{row}}')
+          label(for='dept_name{{row}}') Department Name {{row}}
+        .input-field.col.s4
+          input.validate(id='no_of_projects{{row}}', type='text', name='no_of_projects{{row}}')
+          label(for='no_of_projects{{row}}') No. of Projects
+        .input-field.col.s4
+          input.validate(id='limit{{row}}', type='text', name='limit{{row}}')
+          label(for='limit{{row}}') Limit
+      | {% endfor %}
+      .row
+        button.btn.waves-effect.waves-light(type='submit', name='action')
+          | Submit
+          i.material-icons.right send
+    .col.s2
